@@ -92,8 +92,8 @@ const ListToDoo = () => {
         <tr>
             <td scope="row">${ToDooList.Tarea}</td>
             <td class="px-4 py-2">
-                <button onclick="complete('${ToDooList.Tarea}', ${ToDooList.ID})" class="btn btn-outline-success" >Completada</button>
-                <button onclick="DeleteTarea(${ToDooList.ID})" class="btn btn-outline-danger">Eliminar</button>
+                <button onclick="complete('${ToDooList.Tarea}', ${ToDooList.ID})" class="btn btn-outline-success m-2" >Completada</button>
+                <button onclick="DeleteTarea(${ToDooList.ID})" class="btn btn-outline-danger m-2">Eliminar</button>
             </td>
         </tr>
         `
