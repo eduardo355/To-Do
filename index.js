@@ -18,6 +18,7 @@ Form.addEventListener('submit', (e) => {
     e.preventDefault() 
 
     const Input = document.getElementById('Input')
+    const InputDate = document.getElementById('InputDate')
 
     if(!Input.value){
         return
@@ -27,6 +28,7 @@ Form.addEventListener('submit', (e) => {
 
     const DATA = {
         Tarea: Input.value,
+        Date: InputDate.value || '🤷',
         ID: randomId 
     }
 
@@ -91,7 +93,8 @@ const ListToDoo = () => {
         `
         <tr>
             <td scope="row">${ToDooList.Tarea}</td>
-            <td class="px-4 py-2">
+            <td scope="row">${ToDooList.Date}</td>
+            <td class="px-1 py-2">
                 <button onclick="complete('${ToDooList.Tarea}', ${ToDooList.ID})" class="btn btn-outline-success m-2" >Completada</button>
                 <button onclick="DeleteTarea(${ToDooList.ID})" class="btn btn-outline-danger m-2">Eliminar</button>
             </td>
